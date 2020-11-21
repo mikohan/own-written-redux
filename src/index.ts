@@ -19,7 +19,8 @@ subBtn?.addEventListener('click', () => {
 });
 
 store.subscribe(() => {
-  counter.textContent = store.getState();
+  const count = store.getState();
+  counter.textContent = count.toString();
 });
 
 store.dispatch({ type: 'some_type' });
